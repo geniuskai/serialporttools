@@ -26,15 +26,16 @@ namespace LBH.SerialPortTools
             InitHistoryConfig();
         }
 
+
         #region 状态栏
         void UpdateStatus()
         {
             string comState = "COM Closed";
-            if (mSerialPort != null &&mSerialPort.IsOpen)
+            if (mSerialPort != null && mSerialPort.IsOpen)
             {
                 comState = $"{mSerialPort.PortName} Opened";
             }
-            string status = string.Format (" STATUS: : {0}      S: {1}      R:{2}",comState,sendByteCount,recevieByteCount);
+            string status = string.Format(" STATUS: : {0}      S: {1}      R:{2}", comState, sendByteCount, recevieByteCount);
             statusbar.Pop (0); 
             statusbar.Push (0, status);
         }
