@@ -65,7 +65,7 @@ namespace LBH.SerialPortTools
         //定时发送
         private CheckButton ckTime;
         //定时毫秒
-        private TextView txtTime;
+        private Entry txtTime;
         //打开串口按钮
         private Button btnSp;
         //清除接受按钮
@@ -253,7 +253,7 @@ namespace LBH.SerialPortTools
             timeBox.PackStart(ckTime, false, false,0);
             ckTime.Toggled += new EventHandler(ckTimeToggled);
 
-            txtTime =new TextView();
+            txtTime =new Entry();
             txtTime.SetSizeRequest(100, 20);
             txtTime.Buffer.Text = "1000";
             timeBox.PackStart(txtTime, false, false, 5);
